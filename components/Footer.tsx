@@ -34,14 +34,8 @@ export default function Footer() {
     e.preventDefault();
     setStatus("submitting");
 
-    // Replace this with your actual Web3Forms access key
-    const accessKey = "648edc21-797d-4b9c-bdb7-9ef572dbe34e"; 
-
-    if (accessKey === "YOUR_WEB3FORMS_ACCESS_KEY") {
-      setStatus("error");
-      setErrorMessage("Please update the accessKey in Footer.tsx with your Web3Forms key.");
-      return;
-    }
+    // Web3Forms access key
+    const accessKey = "648edc21-797d-4b9c-bdb7-9ef572dbe34e";
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
